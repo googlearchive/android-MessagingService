@@ -5,8 +5,15 @@
 ---
 status:       PUBLISHED
 technologies: [Android]
-categories:   [Notification]
+categories:   [UI, Notification]
 languages:    [Java]
 solutions:    [Mobile]
 github:       android-MessagingService
+level:        ADVANCED
+icon:         screenshots/icon-web.png
+apiRefs:
+    - android:android.app.Service
+    - android:android.content.Intent
+    - android:android.support.v4.app.NotificationCompat
+    - android:android.support.v4.app.NotificationCompat.CarExtender
 license: apache2

@@ -6,12 +6,31 @@ NotificationCompat. In addition to sending a notification, it also extends
 the notification with a CarExtender to make it compatible with Android Auto.
 Each unread conversation from a user is sent as a distinct notification.
 
+Introduction
+------------
+
+This sample shows a simple service that sends [notifications][1] using
+NotificationCompat.
+
+In addition to sending a notification, it also extends
+the notification with a [CarExtender][2] to make it compatible with Android Auto.
+
+Each unread conversation from a user is sent as a distinct notification.
+
+[1]: https://developer.android.com/guide/topics/ui/notifiers/notifications.html
+[2]: https://developer.android.com/reference/android/support/v4/app/NotificationCompat.CarExtender.html
+
 Pre-requisites
 --------------
 
 - Android SDK v21
 - Android Build Tools v21.1.1
 - Android Support Repository
+
+Screenshots
+-------------
+
+<img src="screenshots/1-main.png" height="400" alt="Screenshot"/> <img src="screenshots/2-onemessage.png" height="400" alt="Screenshot"/> <img src="screenshots/3-threemessages.png" height="400" alt="Screenshot"/> 
 
 Getting Started
 ---------------
