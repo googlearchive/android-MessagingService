@@ -9,16 +9,38 @@ Each unread conversation from a user is sent as a distinct notification.
 Introduction
 ------------
 
-This sample shows a simple service that sends [notifications][1] using
-NotificationCompat.
+#### Checklist while building a messaging app that supports Android Auto:
+1. Ensure that Message notifications are extended using
+NotificationCompat.Builder.extend(new CarExtender()...)
+2. Declare a meta-data tag to your AndroidManifest.xml to specify that your app
+is automotive enabled.
 
-In addition to sending a notification, it also extends
-the notification with a [CarExtender][2] to make it compatible with Android Auto.
+example: AndroidManifest.xml
 
-Each unread conversation from a user is sent as a distinct notification.
+```
+       <meta-data android:name="com.google.android.gms.car.application"
+                   android:resource="@xml/automotive_app_desc"/>
+```
 
-[1]: https://developer.android.com/guide/topics/ui/notifiers/notifications.html
-[2]: https://developer.android.com/reference/android/support/v4/app/NotificationCompat.CarExtender.html
+Include the following to indicate that the application wants to show notifications on
+the Android Auto overview screen.
+
+example: res/xml/automotive\_app\_desc.xml
+```
+        <automotiveApp>
+            <uses name="notification"/>
+        </automotiveApp>
+```
+
+#### Flow
+MessagingFragment is shown to the user. Depending on the button clicked, the MessagingService is
+sent a message. MessagingService in turn creates notifications which can be viewed either on the
+device or in the messaging-simulator.
+
+When a message is read, the associated PendingIntent is triggered and MessageReadReceiver is called
+with the appropriate conversationId. Similarly, when a reply is received, the MessageReplyReceiver
+is called with the appropriate conversationId. MessageLogger logs each event and shows them in a
+TextView in MessagingFragment for correlation.
 
 Pre-requisites
 --------------
