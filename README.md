@@ -3,13 +3,9 @@ Android MessagingService Sample
 ===================================
 
 This sample shows a simple service that sends notifications using
-NotificationCompat. It also extends the notification with Remote
-Input to allow Android N devices to reply via text directly from
-the notification without having to open an App. The same Remote
-Input object also allows Android Auto users to respond by voice
-when the notification is presented there.
-Note: Each unread conversation from a user is sent as a distinct
-notification.
+NotificationCompat. In addition to sending a notification, it also extends
+the notification with a CarExtender to make it compatible with Android Auto.
+Each unread conversation from a user is sent as a distinct notification.
 
 Introduction
 ------------
@@ -50,8 +46,8 @@ TextView in MessagingFragment for correlation.
 Pre-requisites
 --------------
 
-- Android SDK 23
-- Android Build Tools v24.0.0 rc3
+- Android SDK v23
+- Android Build Tools v23.0.2
 - Android Support Repository
 
 Screenshots
@@ -80,7 +76,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 License
 -------
 
-Copyright 2016 The Android Open Source Project, Inc.
+Copyright 2014 The Android Open Source Project, Inc.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
