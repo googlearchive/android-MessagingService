@@ -6,7 +6,7 @@
 ---
 status:       PUBLISHED
 technologies: [Android]
-categories:   [Android N Preview]
+categories:   [UI, Notification]
 languages:    [Java]
 solutions:    [Mobile]
 github:       android-MessagingService
