@@ -51,7 +51,7 @@ Pre-requisites
 --------------
 
 - Android SDK 24
-- Android Build Tools v26.0.1
+- Android Build Tools v27.0.2
 - Android Support Repository
 
 Screenshots
